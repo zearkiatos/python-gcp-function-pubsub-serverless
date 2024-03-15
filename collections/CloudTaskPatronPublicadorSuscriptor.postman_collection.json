@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "819aa286-5b5f-42d9-ad77-23219ad6aadd",
+		"name": "CloudTaskPatronPublicadorSuscriptor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "funcion-pubsub-tutorial-publicador-ciudadano",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mensaje\" : \"¡Necesito ayuda!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{region}}-{{id_project}}.cloudfunctions.net/funcion-pubsub-tutorial-publicador-ciudadano",
+					"protocol": "https",
+					"host": [
+						"{{region}}-{{id_project}}",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"funcion-pubsub-tutorial-publicador-ciudadano"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id_project",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "region",
+			"value": "us-central1",
+			"type": "default"
+		}
+	]
+}
